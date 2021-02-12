@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "github-peek"
+version = "0.1.0"
+description = ""
+authors = ["unrahul <rahulunair@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = {extras = ["speedups"], version = "^3.7.3"}
+typer = "^0.3.2"
+sh = "^1.14.1"
+aiofiles = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
