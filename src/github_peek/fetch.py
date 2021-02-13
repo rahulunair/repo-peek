@@ -107,10 +107,9 @@ def logger_conf():
     )
 
 
-async def main():
+async def peek_repo(repo : str):
     logger_conf()
     config_file = config(".githubkeep.conf")
-    repo = "rahulunair/cloudstore"
     home_dir = Path.home() / ".githubkeep"
     tar_dirs = init_dir(home_dir / "tars")
     repo_dir = init_dir(home_dir / "repos" / repo)
@@ -126,6 +125,6 @@ async def main():
         rm_stored_repos(home_dir)
 
 
-if __name__ == "__main__":
+def main(repo="rahulunair/cloudstore"):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    loop.run_until_complete(peek_repo(repo))

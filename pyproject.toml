@@ -11,6 +11,7 @@ typer = "^0.3.2"
 sh = "^1.14.1"
 aiofiles = "^0.6.0"
 loguru = "^0.5.3"
+shellingham = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
