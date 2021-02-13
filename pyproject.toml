@@ -10,6 +10,7 @@ aiohttp = {extras = ["speedups"], version = "^3.7.3"}
 typer = "^0.3.2"
 sh = "^1.14.1"
 aiofiles = "^0.6.0"
+loguru = "^0.5.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
