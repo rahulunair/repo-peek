@@ -107,13 +107,12 @@ def logger_conf():
     )
 
 
-async def peek_repo(repo : str):
+async def peek_repo(repo: str):
     logger_conf()
     config_file = config(".githubkeep.conf")
     home_dir = Path.home() / ".githubkeep"
     tar_dirs = init_dir(home_dir / "tars")
     repo_dir = init_dir(home_dir / "repos" / repo)
-
 
     if not os.listdir(repo_dir):
         logger.info("fetching repo: {}".format(repo))
