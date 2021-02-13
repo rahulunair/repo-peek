@@ -3,6 +3,7 @@
 import typer
 
 from github_peek.fetch import main
+from . import __version__
 
 app = typer.Typer()
 
@@ -20,6 +21,7 @@ def peek(repo: str):
 @app.command()
 def info():
     typer.secho("a tool to peek into a github repo.")
+    typer.secho("version: {}".format(__version__))
 
 
 if __name__ == "__main__":

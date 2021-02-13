@@ -17,6 +17,8 @@ shellingham = "^1.4.0"
 pytest = "^5.2"
 black = "^20.8b1"
 
+[tool.poetry.scripts]
+ghub = "github_peek.cli:app"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
