@@ -14,8 +14,8 @@ def peek(repo: str):
         typer.secho(f"opening repo: {repo}...", fg=typer.colors.GREEN)
         main(repo)
     except Exception:
-        typer.echo(f"failed to peek {repo}")
-        raise typer.Abort()
+       typer.echo(f"failed to peek {repo}")
+       raise typer.Abort()
 
 
 @app.command()

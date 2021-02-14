@@ -6,8 +6,8 @@ import tarfile
 import aiofiles
 import aiohttp
 
-from github_keep.config import GITHUB_API
-from github_keep.logging import logger
+from .config import GITHUB_API
+from .logging import logger
 
 
 async def make_repo_url(name: str) -> str:
@@ -15,6 +15,7 @@ async def make_repo_url(name: str) -> str:
     owner, repo = name.split("/")
     url = GITHUB_API.format(owner=owner, repo=repo)
     return url
+
 
 async def fetch_repo(name: str = "", tar_dirs: Path = Path("")):
     """fetch a remote repo."""
