@@ -19,13 +19,13 @@ repo-peek only has only subcommand `peek`, which takes a repo as the argument.
 command usage:
 
 ```bash
-ghub peek <repo>
+repk gh <repo>
 ```
 
 example:
 
 ```bash
-ghub peek rahulunair/repo-peek
+repk gh rahulunair/repo-peek
 ```
 
 ### todo
