@@ -77,4 +77,8 @@ The tool creates 2 files and a directory, a config file `~/.repk.ini`, a log fil
 
 I got influenced to build this tool after i saw: [git peek](https://github.com/Jarred-Sumner/git-peek)
 
+Built with :
+[aiohttp](https://github.com/aio-libs/aiohttp)
+[typer](https://github.com/tiangolo/typer)
+
 
