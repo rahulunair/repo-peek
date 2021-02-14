@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "github-peek"
+name = "repo-peek"
 version = "0.2.0"
 description = "A command line tool to peek a remote repo locally."
 authors = ["unrahul <rahulunair@gmail.com>"]
@@ -22,7 +22,7 @@ pytest = "^5.2"
 black = "^20.8b1"
 
 [tool.poetry.scripts]
-ghub = "github_peek.cli:app"
+repk = "repo_peek.cli:app"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

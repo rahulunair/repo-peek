@@ -1,4 +1,4 @@
-from github_peek import __version__
+from repo_peek import __version__
 
 
 def test_version():

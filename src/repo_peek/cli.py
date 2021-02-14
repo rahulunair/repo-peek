@@ -2,7 +2,7 @@
 
 import typer
 
-from github_peek.fetch import main
+from repo_peek.fetch import main
 from . import __version__
 
 app = typer.Typer()
