@@ -73,7 +73,8 @@ remove_by - time till the cache would be kept
 
 ### more information
 
-The tool creates 2 files and a directory, a config file `~/.repk.ini`, a log file `~/.repk.log` and a directory `~/.repk`. repo-peek downloads the tar:gz of the repo, extracts it and saves it to `~/.repk`.
-There is a naive caching mechanism, where the tool deletes each repo if it is older than 3 minutes. 
+The tool creates 2 files and a directory, a config file `~/.repk.ini`, a log file `~/.repk.log` and a directory `~/.repk`. repo-peek downloads the tar:gz of the repo, extracts it and saves it to `~/.repk`. There is a naive caching mechanism, where the tool deletes each repo if it is older than 3 minutes. 
+
+I got influenced to build this tool after i saw: [git peek](https://github.com/Jarred-Sumner/git-peek)
 
 
