@@ -2,7 +2,8 @@
 
 A command line tool to peek a remote repo hosted on github or gitlab locally and view it in your favorite editor. The tool handles cleanup of the repo once you exit your editor. 
 
-<a href="https://asciinema.org/a/3EyUeIwGTYxTJFceBbJNLln8t" target="_blank"><img src="https://asciinema.org/a/3EyUeIwGTYxTJFceBbJNLln8t.svg" /></a>
+[![asciicast](https://asciinema.org/a/uLoPyrNwus5yY2SgyRuJ2qCyq.svg)](https://asciinema.org/a/uLoPyrNwus5yY2SgyRuJ2qCyq)
+
 Default editor is chosen by looking at the `EDITOR` environment variable, if it is not set, vim is chosen as the default editor.
 
 ### install repo-peek
