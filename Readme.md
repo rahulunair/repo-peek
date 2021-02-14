@@ -13,7 +13,7 @@ pip install repo-peek
 
 ### usage:
 
-repo-peek only has only subcommand `peek`, which takes a repo as the argument.
+repo-peek (`repk`) has a subcommand to tell it if you want to checkout a github (`gh`) or a gitlab (`gl`) repo. That is all that is needed.
 
 
 command usage:
