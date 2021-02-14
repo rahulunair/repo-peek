@@ -81,4 +81,3 @@ Built with :
 - [aiohttp](https://github.com/aio-libs/aiohttp)
 - [typer](https://github.com/tiangolo/typer)
 
-

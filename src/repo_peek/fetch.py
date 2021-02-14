@@ -40,9 +40,11 @@ def rm_stored_repos(home_dir):
     shutil.rmtree(home_dir, ignore_errors=True)
 
 
-async def peek_repo(repo: str, service="github"):
+async def peek_repo(repo: str, service="github", cache=False):
     parsed_config = Config(".repk.ini")
     cache_dir = Path.home() / ".repk"
+    if not cache:
+        rm_stored_repos(cache_dir)
     repo_dir = init_dir(cache_dir / "repos" / repo)
     if os.path.isdir(repo_dir) and os.listdir(repo_dir):
         await open_editor(path=repo_dir)
