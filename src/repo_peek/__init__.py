@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 config_file = Path.home() / ".githubkeep.ini"
-config_text = '''
+config_text = """
 [DEFAULT]
 editor = "vim"
 cache_repos = 1
@@ -17,9 +17,7 @@ gitlab_token = ""
 [proxy_settings]
 https_proxy = ""
 http_proxy = ""
-'''
+"""
 if not os.path.exists(config_file):
     with open(config_file, "w") as fh:
         fh.write(config_text)
-
-

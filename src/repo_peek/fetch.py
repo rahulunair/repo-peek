@@ -9,6 +9,7 @@ from .config import Config
 from .config import EDITORS
 from .config import init_dir
 from .utils import fetch_repo
+from .utils import clone_repo
 from .utils import extract
 
 
@@ -39,7 +40,7 @@ def rm_stored_repos(home_dir):
     shutil.rmtree(home_dir, ignore_errors=True)
 
 
-async def peek_repo(repo: str, caching=True):
+async def peek_repo(repo: str, service="github"):
     parsed_config = Config(".githubkeep.ini")
     cache_dir = Path.home() / ".githubkeep"
     repo_dir = init_dir(cache_dir / "repos" / repo)
@@ -51,9 +52,11 @@ async def peek_repo(repo: str, caching=True):
         logger.info("fetching repo: {}".format(repo))
         parsed_config.config.remove_section(repo)
         parsed_config.cache_repo(repo)
-        repo_name = await fetch_repo(repo, tar_dirs)
-        logger.info("extracting repo: {} to {}".format(repo_name, repo_dir))
-        await extract(repo_name, repo_dir)
+        if service == "github":
+            repo_name = await fetch_repo(repo, tar_dirs)
+            await extract(repo_name, repo_dir)
+        elif service == "gitlab":
+            await clone_repo(repo, repo_dir)
         await open_editor(path=repo_dir)
     if parsed_config.is_repo_stale(repo):
         rm_stored_repos(cache_dir)
@@ -62,11 +65,10 @@ async def peek_repo(repo: str, caching=True):
 
 # download readme from cdn to the dir in which editor is openend
 # extract files to the same dir
-# use gitlab api to clone
 # types
 # profile and imporve loading time
 
 
-def main(repo="rahulunair/cloudstore"):
+def main(repo="rahulunair/cloudstore", service="github"):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(peek_repo(repo))
+    loop.run_until_complete(peek_repo(repo, service))

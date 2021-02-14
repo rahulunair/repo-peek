@@ -4,6 +4,7 @@ from datetime import timedelta
 from pathlib import Path
 
 GITHUB_API = "https://api.github.com/repos/{owner}/{repo}/tarball/master"
+GITLAB_API = "https://gitlab.com/{owner}/{repo}"
 EDITORS = ["vim", "vi", "nvim", "nano", "code", "emacs"]
 
 
