@@ -9,7 +9,7 @@ EDITORS = ["vim", "vi", "nvim", "nano", "code", "emacs"]
 
 
 class Config:
-    def __init__(self, cfg_file=".githubkeep.ini"):
+    def __init__(self, cfg_file=".repk.ini"):
         self.config_file = Path.home() / cfg_file
         self.config = configparser.ConfigParser()
         self.config.read(self.config_file)

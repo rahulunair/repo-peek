@@ -3,7 +3,7 @@ __version__ = "0.1.0"
 import os
 from pathlib import Path
 
-config_file = Path.home() / ".githubkeep.ini"
+config_file = Path.home() / ".repk.ini"
 config_text = """
 [DEFAULT]
 editor = "vim"

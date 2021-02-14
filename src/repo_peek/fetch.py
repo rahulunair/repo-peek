@@ -41,13 +41,13 @@ def rm_stored_repos(home_dir):
 
 
 async def peek_repo(repo: str, service="github"):
-    parsed_config = Config(".githubkeep.ini")
-    cache_dir = Path.home() / ".githubkeep"
+    parsed_config = Config(".repk.ini")
+    cache_dir = Path.home() / ".repk"
     repo_dir = init_dir(cache_dir / "repos" / repo)
     if os.path.isdir(repo_dir) and os.listdir(repo_dir):
         await open_editor(path=repo_dir)
     else:
-        parsed_config = Config(".githubkeep.ini")
+        parsed_config = Config(".repk.ini")
         tar_dirs = init_dir(cache_dir / "tars")
         logger.info("fetching repo: {}".format(repo))
         parsed_config.config.remove_section(repo)
