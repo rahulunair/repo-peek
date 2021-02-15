@@ -3,6 +3,7 @@ import asyncio
 import os
 from pathlib import Path
 import shutil
+import uvloop
 
 from .logging import logger
 from .config import Config
@@ -11,6 +12,9 @@ from .config import init_dir
 from .utils import fetch_repo
 from .utils import clone_repo
 from .utils import extract
+
+
+uvloop.install()
 
 
 async def open_editor(editor="vim", path: Path = Path("")):
@@ -46,6 +50,7 @@ async def peek_repo(repo: str, service="github", cache=False):
     if not cache:
         rm_stored_repos(cache_dir)
     repo_dir = init_dir(cache_dir / "repos" / repo)
+    # readme_path = await readme_from_cdn(repo, repo_dir)
     if os.path.isdir(repo_dir) and os.listdir(repo_dir):
         await open_editor(path=repo_dir)
     else:
@@ -72,5 +77,4 @@ async def peek_repo(repo: str, service="github", cache=False):
 
 
 def main(repo="rahulunair/cloudstore", service="github"):
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(peek_repo(repo, service))
+    asyncio.run(peek_repo(repo, service))
