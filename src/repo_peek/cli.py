@@ -22,12 +22,12 @@ def gh(repo: str):
 @app.command()
 def gl(repo: str):
     """open a gitlab repo."""
-    # try:
-    typer.secho(f"opening gitlab repo: {repo}...", fg=typer.colors.YELLOW)
-    main(repo, service="gitlab")
-    # except Exception:
-    #    typer.echo(f"failed to peek {repo}")
-    #    raise typer.Abort()
+    try:
+        typer.secho(f"opening gitlab repo: {repo}...", fg=typer.colors.YELLOW)
+        main(repo, service="gitlab")
+    except Exception:
+        typer.echo(f"failed to peek {repo}")
+        raise typer.Abort()
 
 
 @app.command()
