@@ -3,6 +3,7 @@
 A command line tool to peek a remote repo hosted on github or gitlab locally and view it in your favorite editor. The tool handles cleanup of the repo once you exit your editor. 
 
 ![Python Version](https://img.shields.io/badge/python-3.7+-blue?style=flat-square&logo=python)
+[![CodeFactor](https://www.codefactor.io/repository/github/rahulunair/repo-peek/badge)](https://www.codefactor.io/repository/github/rahulunair/repo-peek)
 [![License](https://img.shields.io/github/license/rahulunair/repo-peek?style=flat-square)](https://github.com/rahulunair/repo-peek/blob/master/LICENSE)
 [![Reddit](https://img.shields.io/badge/Reddit-unrahul-FF4500?style=flat-square&logo=reddit)](https://www.reddit.com/user/unrahul)
 [![Twitter](https://img.shields.io/badge/Twitter-unrahu1-38A1F3?style=flat-square&logo=twitter)](https://twitter.com/intent/follow?screen_name=unrahu1)
